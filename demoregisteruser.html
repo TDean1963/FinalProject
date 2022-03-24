@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register User</title>
+<link rel="stylesheet" href="finalstyle.css">
+</head>
+<body>
+    <form action="signin.html" id="myaction">
+    <header>Register New User</header>
+        <label for="fname"><b>First Name</b></label> <br>   
+        <input type="text" placeholder="First Name" name="fname"><br>
+        <label for="lname"><b>Last name</b></label><br>
+        <input type="text" placeholder="Last Name" name="lname"><br>
+        <label for="email"><b>Email</b></label><br>
+        <input type="text" placeholder="Enter Email" name="email"><br>
+        <label><b>Username</b></label><br>
+        <input type="text" placeholder="Enter Username" name="Username"><br>
+        <label for="Roles"><b>What is you Role?</b></label><br>
+            <select name="roles" id="roles">
+                <option value="none">Select One</option>
+                <option value="Employee">Employee</option>
+                <option value="Manager">Manager</option>
+            </select><br>
+        <label for="pwd"><b>Password</b></label><br>
+        <input type="text" placeholder="Enter Password" name="pwd"><br>
+        <label for="pwd"><b>Re-Enter Password</b></label><br>
+        <input type="text" placeholder="Re-Enter Password" name="pwd"><br>
+        <label for="Store"><b>Store Location</b></label><br>
+        <select name="Store" id="Storenum">
+         <option value="Location1">Location 1</option>
+         <option value="Location2">Location 2</option>
+        </select><br>
+  <br><br>
+  <button type="submit" onclick="" id="regsign">Register and return to Login</button><button type="submit"  id="cancel1">Clear Form</button>
+     
+  <footer><a href="signin.html" class="cancel">Cancel</a></footer>
+    </form>
+    
+
+</body>        
+
+</html>

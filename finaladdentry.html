@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <title>Add Book Entry</title>
+        <link rel="stylesheet" href="finalstyle.css"></link>
+        <script src="finaljava.js"></script>
+    </head>
+
+    <body>
+      <!-- <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid1">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header> -->
+
+      <!-- might have to delete form, really not being used
+      trying to put header and insructions on top -->
+<div class="modal" id="myModal">
+      <div class="flex-container"> 
+        
+        <div class="flex-child">
+          <header><h1>Add New Book Entry</h1></header>
+          <h2>To enter new inventory or new book selection follw the following steps.</h2>
+          <ol>
+              <li>Enter the book information into the following prompt.</li>
+              <li>Once prompt is completed slect Preview Entry to confirm your entries</li>
+              <li>Once the preview has been confirmed, select Add Entry</li>
+              <li>Press Clear Entry to reset form</li>
+          </ol>
+        
+        <div id="btn">
+          <input onclick="showBook()" class="button" id="submit" value="Preview Entry">
+          <input class="button" id="cancel" value="Clear Entry" onclick="alert('Hello World!')"> </input>
+        </div>
+  
+        </div>
+
+          <div class="flex-child">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="bookTitle" placeholder="Book Title">
+
+                <label for="author">Author</label>
+                <input type="text" id="author" name="bookAuthor" placeholder="Book author">
+
+                <label for="dateaquired">Date Acquired</label>
+                <input type="date" id="dateAq" name="dateAcquired" placeholder="Date Acquired">
+          
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Store Number">
+                            
+                <label for="title">Date Published</label>
+                <input type="date" id="datepub" name="datepublished" placeholder="Date Published">
+
+                <label for="copies">Number of Copies</label>
+                <input type="text" id="copies" name="copies" placeholder="Number of Copies">
+
+                <label for="price">Retail Price</label>
+                <input type="number" id="price" name="price" placeholder="Price">
+
+                <label for="staffEntry">Staff Member</label>
+                <input type="text" class="staffEntry" name="staffEntry" placeholder="Who is making Entry?">
+              </div>
+
+          <div class="flex-child" id="second">
+
+                <label for="condition">Condition</label>
+                  <select id="conditiondrop" name="condition" id="condition">
+                      <option placeholder="poor">Select One</option>
+                      <option value="poor">Poor</option>
+                      <option value="fair">Fair</option>
+                      <option value="good">Good</option>
+                      <option value="great">Great</option>
+                      <option value="mint">Mint</option>
+                  </select>
+                  
+                    <!-- <div> -->
+                      <label id="genre">Genre</label>
+                      <fieldset class="group">
+                        <legend>Select all genres that apply to new book entry, limit to 3 selections</legend>
+                        <ul class="chkeckbox">
+
+                          <li><input type="checkbox" class="column-1"> Action</input></li>
+                          <li><input type="checkbox" class="column-1"> Adventure</input></li>
+                          <li><input type="checkbox" class="column-1"> Autobiography</input></li>
+                          <li><input type="checkbox" class="column-1"> Biography</input></li>
+                          <li><input type="checkbox" class="column-1"> Comedy</input></li>
+                          <li><input type="checkbox" class="column-1"> Fantasy</input></li>
+                          <li><input type="checkbox" class="column-1"> Fiction</input></li>
+                          <li><input type="checkbox" class="column-1"> History</input></li>
+                          <li><input type="checkbox" class="column-1"> Horror</input></li>
+                          <li><input type="checkbox" class="column-1"> Horror</input></li>
+                          <li><input type="checkbox" class="column-1"> Mystery</input></li>
+                          <li><input type="checkbox" class="column-1"> NonFiction</input></li>
+                          <li><input type="checkbox" class="column-1"> Comedy</input></li>
+                          <li><input type="checkbox" class="column-1"> Fantasy</input></li>
+                          <li><input type="checkbox" class="column-1"> Religion</input></li>
+                          <li><input type="checkbox" class="column-1"> Self Help</input></li>
+                        </ul>
+                        </fieldset>
+                    <!-- </div> -->
+
+      </div>
+</div>
+      </body>
+
+</html>
