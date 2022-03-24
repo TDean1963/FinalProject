@@ -40,37 +40,43 @@ function addBooktoList(){
 newCell.appendChild(newText);
 
 }
-console.log(newCell)
+// console.log(newCell)
 // Bring up Add New Entry Modal
 
 let modal = document.getElementById("myModal");
-const btn = document.getElementById("myBtn");
+const btn = document.getElementById("button");
 
-btn.onclick = function(){
-  modal.style.display = "block";
-}
+// btn.onclick = () => {
+//   modal.style.display = "block";
+// }
 
 
-const newBook = [bookTitle, bookAuthor, datePublished, storeLocation,copies, price, condition]
+
 // // Gather all the information from the inputs from register new book entry
-let bookTitle = document.getElementsByClassName('title').value;
-let bookAuthor = document.getElementsById('author').value;
-let dateaquired = document.getElementsById('dateAq').value;
-let datePublished = document.getElementsById('datepub').value;
-let storeLocation = document.getElementsById('location').value;
-let copies = document.getElementsByClassName('copies').value;
-let price = document.getElementById('price').value;
-let staff = document.getElementsByClassName('staffEntry').value;
-let condition = document.getElemeCells
+let bookTitle = document.getElementById('title');
+let bookAuthor = document.getElementById('author');
+let dateaquired = document.getElementById('dateAq');
+let datePublished = document.getElementById('datepub');
+let storeLocation = document.getElementById('location');
+let copies = document.getElementById('copies');
+let price = document.getElementById('price');
+
+const newBook = [bookTitle, bookAuthor, datePublished, storeLocation,copies, price]
+
+let bttn = document.getElementById("button1")
+console.log(bttn)
 
 
 
 function showBook() { 
+  console.log(bookTitle.value)
+
     document.write(newBook)
     window.open("");
 }
 
-console.log(newBook)
+bttn.addEventListener("click", showBook())
+
 
 // var modal = document.getElementById("myModal");
 
@@ -109,4 +115,4 @@ console.log(newBook)
 // //create new user login
 // //Send back to login page once confirmed
 
-//   }}
+//

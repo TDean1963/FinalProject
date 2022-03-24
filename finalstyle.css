@@ -35,7 +35,7 @@ body
   justify-content: center;
   background-color: blanchedalmond;
   padding: 1rem;
-  margin: 1;px;9po
+  margin: 1;px;
   border: 1px groove #301008;
   border-radius: 5rem;
   box-shadow: 4px 4px black;
@@ -50,6 +50,7 @@ body
   justify-content:space-around;
   background-color: blanchedalmond;
   padding: 3rem;
+  border-radius: 5rem;
   margin: 20%;
   border: 1px groove #301008;
   box-shadow: 4px 4px black;
@@ -88,6 +89,15 @@ header{
   background-color: #b6c48e;
   color: #f2f2f2;
   padding: 1rem;
+}
+
+#button1{
+   width: auto;
+   display: inline-block;
+  background-color: #b6c48e;
+ 
+  color: aliceblue;
+  font-size:  20px;
 }
 
 .column1{
@@ -136,6 +146,7 @@ h2
   justify-content: center;
   text-align: center;
   padding: 2%;
+  font-size: xx-large;
 }
 
 label 
@@ -156,7 +167,7 @@ label
 
 input[type=text], select, textarea  
 {
-width: 70%;
+width: 65%;
 padding: 6px;
 margin-bottom: 1px;
 border: 1px solid #ccc;
@@ -167,8 +178,8 @@ text-align: center;
 }
 
 input[type=password], select, textarea {
-width: 70%;
-padding: 1px;
+width: 65%;
+padding: 6px;
 margin-bottom: 3px;
 border: 1px solid #ccc;
 border-radius: 2px;
@@ -218,9 +229,17 @@ fieldset.group legend
 
 }
 
+#top{
+  display: flex;
+  flex-direction: column;
+}
+
 #btn
 {
   padding: 10;
+  display: inline-block;
+  background-color: #b6c48e;
+  color: #f2f2f2;
 }
 
 /* .checkbox
