@@ -29,6 +29,67 @@ body
   /* border: 2px groove maroon; */
 }
 
+.flex-container1
+{
+  display: flex;
+  justify-content: center;
+  background-color: blanchedalmond;
+  padding: 1rem;
+  margin: 1;px;9po
+  border: 1px groove #301008;
+  border-radius: 5rem;
+  box-shadow: 4px 4px black;
+  align-content: flex-end;
+  
+
+  /* border: 2px groove maroon; */
+}
+
+#signinform{
+  display: inline-block;
+  justify-content:space-around;
+  background-color: blanchedalmond;
+  padding: 3rem;
+  margin: 20%;
+  border: 1px groove #301008;
+  box-shadow: 4px 4px black;
+}
+username{
+
+}
+
+header{
+  font-size: xx-large;
+}
+
+#containerbook{
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  justify-content:center;
+  align-items: center;
+  padding: 2rem;
+  margin: 30%;
+  border: 1px groove #301008;
+  border-radius: 5rem;
+  box-shadow: 4px 4px black;
+  
+}
+
+.preview{
+  border-radius: 10rem;
+  width: 100%;
+  height: 1%;
+  padding: 4px; 
+}
+
+.submit{
+  display: inline-block;
+  background-color: #b6c48e;
+  color: #f2f2f2;
+  padding: 1rem;
+}
+
 .column1{
   float: right;
   margin: 15;
@@ -95,9 +156,9 @@ label
 
 input[type=text], select, textarea  
 {
-width: 100%;
+width: 70%;
 padding: 6px;
-margin-bottom: 3px;
+margin-bottom: 1px;
 border: 1px solid #ccc;
 border-radius: 2px;
 box-sizing:border-box;
@@ -106,8 +167,8 @@ text-align: center;
 }
 
 input[type=password], select, textarea {
-width: 100%;
-padding: 4px;
+width: 70%;
+padding: 1px;
 margin-bottom: 3px;
 border: 1px solid #ccc;
 border-radius: 2px;
@@ -118,7 +179,7 @@ resize: vertical;
 #conditondrop
 {
 width: 50%;
-padding: 12px;
+padding: 2px;
 margin-bottom: 3px;
 border: 1px solid #ccc;
 border-radius: 2px;

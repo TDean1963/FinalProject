@@ -9,16 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchableCells = Array.from(tableRows)
     .map(row => row.querySelectorAll("td")[columnIndex]);
 
+    console.log(headerCell)
+    console.log(columnIndex)
+  
+
     inputField.addEventListener("input", () =>{
       const searchQuery = inputField.value.toLowerCase();
 
       for (const tableCell of searchableCells) {
         const row = tableCell.closest("tr");
-        const value = tableCell.textContent.toLowerCase().replace(",","");
+        const value = tableCell.textContent.toLowerCase().appendChild(",","");
 
         row.style.visibility = null;
 
-        if (value.search(searchQuery)=== -1){
+        if (value.search(searchQuery) === -1){
           row.style.visibility = "collapes";
         }
       }
@@ -36,7 +40,7 @@ function addBooktoList(){
 newCell.appendChild(newText);
 
 }
-
+console.log(newCell)
 // Bring up Add New Entry Modal
 
 let modal = document.getElementById("myModal");
@@ -47,24 +51,26 @@ btn.onclick = function(){
 }
 
 
-
+const newBook = [bookTitle, bookAuthor, datePublished, storeLocation,copies, price, condition]
 // // Gather all the information from the inputs from register new book entry
-// let bookTitle = document.getElementsByClassName('title').value;
-// let bookAuthor = document.getElementsById('author').value;
-// let dateaquired = document.getElementsById('dateAq').value;
-// let datePublished = document.getElementsById('datepub').value;
-// let storeLocation = document.getElementsById('location').value;
-// let copies = document.getElementsByClassName('copies').value;
-// let price = document.getElementById('price').value;
-// let staff = document.getElementsByClassName('staffEntry').value;
-// let condition = document.getElemeCells
-
-// function showBook() { 
-//     document.write(newBook)
-//     window.open("");
-// }
+let bookTitle = document.getElementsByClassName('title').value;
+let bookAuthor = document.getElementsById('author').value;
+let dateaquired = document.getElementsById('dateAq').value;
+let datePublished = document.getElementsById('datepub').value;
+let storeLocation = document.getElementsById('location').value;
+let copies = document.getElementsByClassName('copies').value;
+let price = document.getElementById('price').value;
+let staff = document.getElementsByClassName('staffEntry').value;
+let condition = document.getElemeCells
 
 
+
+function showBook() { 
+    document.write(newBook)
+    window.open("");
+}
+
+console.log(newBook)
 
 // var modal = document.getElementById("myModal");
 
