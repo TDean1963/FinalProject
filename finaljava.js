@@ -1,50 +1,50 @@
-// Books store directory page
-//Make headings searchable
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".search-input").forEach(inputField => {
-    const tableRows = inputField.closest("table").querySelectorAll("tbody tr")
-    const headerCell = inputField.closest("th");
-    const otherHeaderCells = inputField.closest("tr").querySelectorAll("th");
-    const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell);
-    const searchableCells = Array.from(tableRows)
-    .map(row => row.querySelectorAll("td")[columnIndex]);
+// // Books store directory page
+// //Make headings searchable
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.querySelectorAll(".search-input").forEach(inputField => {
+//     const tableRows = inputField.closest("table").querySelectorAll("tbody tr")
+//     const headerCell = inputField.closest("th");
+//     const otherHeaderCells = inputField.closest("tr").querySelectorAll("th");
+//     const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell);
+//     const searchableCells = Array.from(tableRows)
+//     .map(row => row.querySelectorAll("td")[columnIndex]);
 
-    console.log(headerCell)
-    console.log(columnIndex)
+//     console.log(headerCell)
+//     console.log(columnIndex)
   
 
-    inputField.addEventListener("input", () =>{
-      const searchQuery = inputField.value.toLowerCase();
+//     inputField.addEventListener("input", () =>{
+//       const searchQuery = inputField.value.toLowerCase();
 
-      for (const tableCell of searchableCells) {
-        const row = tableCell.closest("tr");
-        const value = tableCell.textContent.toLowerCase().appendChild(",","");
+//       for (const tableCell of searchableCells) {
+//         const row = tableCell.closest("tr");
+//         const value = tableCell.textContent.toLowerCase().appendChild(",","");
 
-        row.style.visibility = null;
+//         row.style.visibility = null;
 
-        if (value.search(searchQuery) === -1){
-          row.style.visibility = "collapes";
-        }
-      }
-    })
-  })
-})
+//         if (value.search(searchQuery) === -1){
+//           row.style.visibility = "collapes";
+//         }
+//       }
+//     })
+//   })
+// })
 
 
 //Add New Table Rows/Book to list
-function addBooktoList(){
-  let tbodyRef = document.getElementById("myTable").getElementsByTagName("tbody")[0];
-  let newRow = tbodyRef.insertRow();
-  let newCell = newRow.insertCell();
-  let newText = document.createTextNode('new row');
-newCell.appendChild(newText);
+// function addBooktoList(){
+//   let tbodyRef = document.getElementById("myTable").getElementsByTagName("tbody")[0];
+//   let newRow = tbodyRef.insertRow();
+//   let newCell = newRow.insertCell();
+//   let newText = document.createTextNode('new row');
+// newCell.appendChild(newText);
 
-}
+// }
 // console.log(newCell)
 // Bring up Add New Entry Modal
 
-let modal = document.getElementById("myModal");
-const btn = document.getElementById("button");
+// let modal = document.getElementById("myModal");
+// const btn = document.getElementById("button");
 
 // btn.onclick = () => {
 //   modal.style.display = "block";
@@ -53,8 +53,13 @@ const btn = document.getElementById("button");
 
 
 // // Gather all the information from the inputs from register new book entry
-let bookTitle = document.getElementById('title');
+const bookTitle = document.querySelector("bookTitle");
+console.log(bookTitle, "bookTitle")
+
 let bookAuthor = document.getElementById('author');
+console.log(bookAuthor, "bookAuthor")
+
+
 let dateaquired = document.getElementById('dateAq');
 let datePublished = document.getElementById('datepub');
 let storeLocation = document.getElementById('location');
@@ -67,15 +72,15 @@ let bttn = document.getElementById("button1")
 console.log(bttn)
 
 
+// bttn.addEventListener("click", showBook())
 
 function showBook() { 
-  console.log(bookTitle.value)
+console.log(bookTitle)
+// localStorage.setItem(newBookKey, JSON.stringify(newBook))
 
-    document.write(newBook)
-    window.open("");
 }
 
-bttn.addEventListener("click", showBook())
+
 
 
 // var modal = document.getElementById("myModal");
