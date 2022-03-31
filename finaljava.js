@@ -53,8 +53,7 @@
 
 
 // // Gather all the information from the inputs from register new book entry
-const bookTitle = document.querySelector("bookTitle");
-console.log(bookTitle, "bookTitle")
+const bookTitle = document.getElementById("bookTitle");
 
 let bookAuthor = document.getElementById('author');
 console.log(bookAuthor, "bookAuthor")
@@ -66,7 +65,7 @@ let storeLocation = document.getElementById('location');
 let copies = document.getElementById('copies');
 let price = document.getElementById('price');
 
-const newBook = [bookTitle, bookAuthor, datePublished, storeLocation,copies, price]
+
 
 let bttn = document.getElementById("button1")
 console.log(bttn)
@@ -75,8 +74,32 @@ console.log(bttn)
 // bttn.addEventListener("click", showBook())
 
 function showBook() { 
-console.log(bookTitle)
-// localStorage.setItem(newBookKey, JSON.stringify(newBook))
+  const newBook = {"bookTitle": bookTitle.value, "bookAuthor":bookAuthor.value}
+console.log(bookTitle.value)
+// localStorage.setItem("newBookKey", JSON.stringify(newBook))
+
+
+let tbody = document.getElementById("tbody")
+console.log(tbody , "tbody")
+
+let book = document.createElement("tr")
+let btitle = document.createElement("td")
+let bauthor = document.createElement("td")
+let bdate = document.createElement("td")
+let btypee = document.createElement("td")
+let blocate = document.createElement("td")
+
+btitle.innerText = bookTitle.value
+bauthor.innerText = bookAuthor.value
+
+book.appendChild(btitle)
+book.appendChild(bauthor)
+tbody.appendChild(book)
+window.location.href="/finalbookpage2.html"
+
+
+
+
 
 }
 
