@@ -56,14 +56,12 @@
 const bookTitle = document.getElementById("bookTitle");
 
 let bookAuthor = document.getElementById('author');
-console.log(bookAuthor, "bookAuthor")
-
-
-let dateaquired = document.getElementById('dateAq');
 let datePublished = document.getElementById('datepub');
 let storeLocation = document.getElementById('location');
 let copies = document.getElementById('copies');
 let price = document.getElementById('price');
+let condition = document.getElementById('conditiondrop');
+let genre = document.getElementById('genre');
 
 
 
@@ -71,76 +69,47 @@ let bttn = document.getElementById("button1")
 console.log(bttn)
 
 
-// bttn.addEventListener("click", showBook())
 
 function showBook() { 
-  const newBook = {"bookTitle": bookTitle.value, "bookAuthor":bookAuthor.value}
-console.log(bookTitle.value)
-// localStorage.setItem("newBookKey", JSON.stringify(newBook))
+  const newBook = {
+    bookTitle: bookTitle.value, 
+    bookAuthor:bookAuthor.value, 
+    location:storeLocation.value, 
+    datepub:datePublished.value,  
+    price:price.value, 
+    copies:copies.value, 
+    genre:genre.value};
 
+localStorage.setItem("newBookKey", JSON.stringify(newBook));
 
-let tbody = document.getElementById("tbody")
-console.log(tbody , "tbody")
+window.location.href = "/finalbookpage2.html"; 
 
-let book = document.createElement("tr")
-let btitle = document.createElement("td")
-let bauthor = document.createElement("td")
-let bdate = document.createElement("td")
-let btypee = document.createElement("td")
-let blocate = document.createElement("td")
+window.onload = function () {
+  let bookObject = localStorage.getItem("newBookKey");
+  let bookList = JSON.parse(bookObject);
+  let book = document.createElement("tr");
+  let btitle = document.createElement("td");
+  let bauthor = document.createElement("td");
+  let bdate = document.createElement("td");
+  let blocate = document.createElement("td");
+  let bprice = document.createElement("td");
+  let bcopy = document.createElement("td");
+  let bgenre = document.createElement("td");
 
-btitle.innerText = bookTitle.value
-bauthor.innerText = bookAuthor.value
+  btitle.innerText = bookList.bookTitle;
+  bauthor.innerText = bookList.bookAuthor;
+  bdate.innerText = bookList.datePublished;
+  blocate.innerText = bookList.storeLocation;
+  bcopy.innerText = bookList.copies;
+  bprice.innerText = bookList.price;
+  bgenre.innerText = bookList.genre;
 
-book.appendChild(btitle)
-book.appendChild(bauthor)
-tbody.appendChild(book)
-window.location.href="/finalbookpage2.html"
-
-
-
-
-
-}
-
-
-
-
-// var modal = document.getElementById("myModal");
-
-// // Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-
-// // create a function to preview the book entry in a pop up window
-
-
-// // Create a function to confirm the entry for main directory
-
-// //Book directory list display
-
-// //search bar for book (find in list)
-
-// //create login page credentials sign in
-
-// //create new user login
-// //Send back to login page once confirmed
-
-//
+  book.appendChild(btitle);
+  book.appendChild(bauthor);
+  book.appendChild(bdate);
+  book.appendChild(blocate);
+  book.appendChild(bprice);
+  book.appendChild(bcopy);
+  book.appendChild(bgenre);
+  tbody.appendChild(book);
+}}

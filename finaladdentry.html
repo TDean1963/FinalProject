@@ -63,8 +63,8 @@
           </ol>
         
         <div id="btn">
-          <button  onclick= 'showBook()' class="button" id="button1" value="Preview Entry"></button>
-          <button class="button3" id="cancel" value="Clear Entry" onclick="alert('Entry will be deleted and reset')"></button>
+          <button type="submit" onclick= "showBook()" class="button" id="button1">Submit Book Entry</button>
+          <button class="button3" id="cancel" value="Clear Entry" onclick="alert('Entry will be deleted and reset')">Reset Book Entry</button>
         </div>
   
         </div>
@@ -75,9 +75,6 @@
 
                 <label for="author">Author</label>
                 <input type="text" id="author" name="bookAuthor" placeholder="Book author">
-
-                <label for="dateaquired">Date Acquired</label>
-                <input type="date" id="dateAq" name="dateAcquired" placeholder="Date Acquired">
           
                 <label for="location">Location</label>
                 <input type="text" id="location" name="location" placeholder="Store Number">
@@ -91,47 +88,8 @@
                 <label for="price">Retail Price</label>
                 <input type="number" id="price" name="price" placeholder="Price">
 
-                <label for="staffEntry">Staff Member</label>
-                <input type="text" class="staffEntry" name="staffEntry" placeholder="Who is making Entry?">
-              </div>
-
-          <div class="flex-child" id="second">
-
-                <label for="condition">Condition</label>
-                  <select id="conditiondrop" name="condition" id="condition">
-                      <option placeholder="poor">Select One</option>
-                      <option value="poor">Poor</option>
-                      <option value="fair">Fair</option>
-                      <option value="good">Good</option>
-                      <option value="great">Great</option>
-                      <option value="mint">Mint</option>
-                  </select>
-                  
-                    <!-- <div> -->
-                      <label id="genre">Genre</label>
-                      <fieldset class="group">
-                        <legend>Select all genres that apply to new book entry, limit to 3 selections</legend>
-                        <ul class="chkeckbox">
-
-                          <li><input type="checkbox" class="column-1"> Action</input></li>
-                          <li><input type="checkbox" class="column-1"> Adventure</input></li>
-                          <li><input type="checkbox" class="column-1"> Autobiography</input></li>
-                          <li><input type="checkbox" class="column-1"> Biography</input></li>
-                          <li><input type="checkbox" class="column-1"> Comedy</input></li>
-                          <li><input type="checkbox" class="column-1"> Fantasy</input></li>
-                          <li><input type="checkbox" class="column-1"> Fiction</input></li>
-                          <li><input type="checkbox" class="column-1"> History</input></li>
-                          <li><input type="checkbox" class="column-1"> Horror</input></li>
-                          <li><input type="checkbox" class="column-1"> Horror</input></li>
-                          <li><input type="checkbox" class="column-1"> Mystery</input></li>
-                          <li><input type="checkbox" class="column-1"> NonFiction</input></li>
-                          <li><input type="checkbox" class="column-1"> Comedy</input></li>
-                          <li><input type="checkbox" class="column-1"> Fantasy</input></li>
-                          <li><input type="checkbox" class="column-1"> Religion</input></li>
-                          <li><input type="checkbox" class="column-1"> Self Help</input></li>
-                        </ul>
-                        </fieldset>
-                    <!-- </div> -->
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" name="g1" placeholder="Genre">
 
       </div>
 </div>
